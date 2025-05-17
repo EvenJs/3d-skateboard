@@ -1,6 +1,14 @@
 import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { Content, isFilled } from "@prismicio/client";
+import {
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
+
+import { Bounded } from "@/components/Bounded";
+import { Heading } from "@/components/Heading";
+import SkateboardProduct from "./SkateboardProduct";
 
 /**
  * Props for `ProductGrid`.
@@ -12,14 +20,11 @@ export type ProductGridProps = SliceComponentProps<Content.ProductGridSlice>;
  */
 const ProductGrid: FC<ProductGridProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="bg-texture bg-brand-gray"
     >
-      Placeholder component for product_grid (variation: {slice.variation})
-      slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
       {/**
        * 💡 Use Prismic MCP with your code editor
        *
@@ -45,7 +50,26 @@ const ProductGrid: FC<ProductGridProps> = ({ slice }) => {
        * Your code editor reads your slice model and helps you code faster ⚡
        * 📚 Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
        */}
-    </section>
+      <Heading className="text-center ~mb-4/6" as="h2">
+        <PrismicText field={slice.primary.heading} />
+      </Heading>
+      <div className="text-center ~mb-6/10">
+        <PrismicRichText field={slice.primary.body} />
+      </div>
+
+      <div className="grid w-full grid-cols-1 gap-4 md:grid:cols-2 lg:grid-cols-4">
+        {slice.primary.product.map(
+          ({ skateboard }) =>
+            // Render the item
+            isFilled.contentRelationship(skateboard) && (
+              <SkateboardProduct key={skateboard.id} id={skateboard.id} />
+            )
+          // <PrismicNextLink key={index} field={item.skateboard}>
+          //   Link
+          // </PrismicNextLink>
+        )}
+      </div>
+    </Bounded>
   );
 };
 

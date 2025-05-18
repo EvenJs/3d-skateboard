@@ -9,6 +9,7 @@ import {
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import SkateboardProduct from "./SkateboardProduct";
+import { SlideIn } from "@/components/SlideIn";
 
 /**
  * Props for `ProductGrid`.
@@ -50,13 +51,18 @@ const ProductGrid: FC<ProductGridProps> = ({ slice }) => {
        * Your code editor reads your slice model and helps you code faster ⚡
        * 📚 Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
        */}
-      <Heading className="text-center ~mb-4/6" as="h2">
-        <PrismicText field={slice.primary.heading} />
-      </Heading>
-      <div className="text-center ~mb-6/10">
-        <PrismicRichText field={slice.primary.body} />
-      </div>
 
+      <SlideIn>
+        <Heading className="text-center ~mb-4/6" as="h2">
+          <PrismicText field={slice.primary.heading} />
+        </Heading>
+      </SlideIn>
+
+      <SlideIn>
+        <div className="text-center ~mb-6/10">
+          <PrismicRichText field={slice.primary.body} />
+        </div>
+      </SlideIn>
       <div className="grid w-full grid-cols-1 gap-4 md:grid:cols-2 lg:grid-cols-4">
         {slice.primary.product.map(
           ({ skateboard }) =>

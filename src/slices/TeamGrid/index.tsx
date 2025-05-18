@@ -6,6 +6,7 @@ import { Heading } from "@/components/Heading";
 import { createClient } from "@/prismicio";
 import React from "react";
 import Skater from "./Skater";
+import { SlideIn } from "@/components/SlideIn";
 
 /**
  * Props for `TeamGrid`.
@@ -50,14 +51,19 @@ const TeamGrid = async ({ slice }: TeamGridProps): Promise<JSX.Element> => {
        * Your code editor reads your slice model and helps you code faster ⚡
        * 📚 Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
        */}
-      <Heading as="h2" size="lg" className="mb-8 text-center text-white">
-        <PrismicText field={slice.primary.heading} />
-      </Heading>
-
+      <SlideIn>
+        <Heading as="h2" size="lg" className="mb-8 text-center text-white">
+          <PrismicText field={slice.primary.heading} />
+        </Heading>
+      </SlideIn>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
         {skaters.map((skater, index) => (
           <React.Fragment key={index}>
-            {skater.data.first_name && <Skater skater={skater} index={index} />}
+            <SlideIn>
+              {skater.data.first_name && (
+                <Skater skater={skater} index={index} />
+              )}
+            </SlideIn>
           </React.Fragment>
         ))}
       </div>

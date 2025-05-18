@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { ButtonLink } from "./ButtonLink";
-import { Logo } from "./Logo";
-import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
+
+import { ButtonLink } from "@/components/ButtonLink";
+import { Logo } from "@/components/Logo";
+import { createClient } from "@/prismicio";
 
 type Props = {};
 

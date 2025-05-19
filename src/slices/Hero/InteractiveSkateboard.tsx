@@ -3,12 +3,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
-import {
-  ContactShadows,
-  Environment,
-  Html,
-  OrbitControls,
-} from "@react-three/drei";
+import { ContactShadows, Environment, Html } from "@react-three/drei";
 import { Canvas, ThreeEvent, useThree } from "@react-three/fiber";
 
 import { Skateboard } from "@/slices/Hero/Skateboard";
@@ -188,7 +183,6 @@ function Scene({
   }
   return (
     <group>
-      <OrbitControls />
       <Environment files={"/hdr/warehouse-256.hdr"} />
       <group ref={originRef}>
         <group ref={containerRef} position={[-0.25, 0, -0.635]}>

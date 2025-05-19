@@ -71,7 +71,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <WideLogo className="w-full text-brand-purple hidden opacity-20 mix-blend-multiply lg:block" />
         <TallLogo className="w-full text-brand-purple opacity-20 mix-blend-multiply lg:hidden" />
       </div>
-      <div className="grid absolute inset-0 mx-auto mt-24 max-w-6xl grid-rows-[1fr,auto] place-items-end px-6 ~ py-10/16">
+      <div className="absolute inset-0 mx-auto mt-24 grid max-w-6xl grid-rows-[1fr,auto] place-items-end px-6 ~py-10/16">
         <Heading className="relative max-w-2xl place-self-start">
           <PrismicText field={slice.primary.heading} />
         </Heading>
@@ -84,6 +84,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <ButtonLink
             field={slice.primary.button}
             icon="skateboard"
+            size="lg"
             className="z-20 mt-2 block"
           >
             {slice.primary.button.text}

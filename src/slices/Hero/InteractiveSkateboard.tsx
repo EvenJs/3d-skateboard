@@ -86,7 +86,7 @@ function Scene({
   }, []);
 
   useEffect(() => {
-    camera.lookAt(new THREE.Vector3(-0.2, 0.25, 0));
+    camera.lookAt(new THREE.Vector3(-0.2, 0.15, 0));
     setZoom();
 
     window.addEventListener("resize", setZoom);
@@ -178,7 +178,7 @@ function Scene({
         origin.rotation,
         {
           y: `+=${Math.PI * 2}`,
-          duration: 0.67,
+          duration: 0.77,
           ease: "none",
         },
         0.3

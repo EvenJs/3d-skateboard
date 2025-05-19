@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { Content } from "@prismicio/client";
+import { Content, asImageSrc } from "@prismicio/client";
 import {
   PrismicRichText,
   PrismicText,
@@ -9,10 +9,9 @@ import {
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { ButtonLink } from "@/components/ButtonLink";
-import { WideLogo } from "./WideLogo";
-import { TallLogo } from "./TallLogo";
-import { InteractiveSkateboard } from "./InteractiveSkateboard";
-import { asImageSrc } from "@prismicio/client";
+import { WideLogo } from "@/slices/Hero/WideLogo";
+import { TallLogo } from "@/slices/Hero/TallLogo";
+import { InteractiveSkateboard } from "@/slices/Hero/InteractiveSkateboard";
 
 const DEFAULT_DECK_TEXTURE = "/skateboard/Deck.webp";
 const DEFAULT_WHEEL_TEXTURE = "/skateboard/SkateWheel1.png";

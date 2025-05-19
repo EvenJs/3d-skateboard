@@ -1,12 +1,12 @@
-import { JSX } from "react";
+import React, { JSX } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicText, SliceComponentProps } from "@prismicio/react";
+
+import { createClient } from "@/prismicio";
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
-import { createClient } from "@/prismicio";
-import React from "react";
-import Skater from "./Skater";
 import { SlideIn } from "@/components/SlideIn";
+import Skater from "@/slices/TeamGrid/Skater";
 
 /**
  * Props for `TeamGrid`.

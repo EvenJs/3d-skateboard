@@ -4,8 +4,8 @@ import React, { Suspense, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { CameraControls, Environment, useTexture } from "@react-three/drei";
-
 import { asImageSrc } from "@prismicio/client";
+
 import { Skateboard } from "@/slices/Hero/Skateboard";
 import { useCustomizerControls } from "@/app/build/context";
 

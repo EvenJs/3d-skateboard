@@ -1,16 +1,17 @@
 import { FC } from "react";
+import clsx from "clsx";
 import { Content } from "@prismicio/client";
 import {
   PrismicRichText,
   PrismicText,
   SliceComponentProps,
 } from "@prismicio/react";
+
 import { Bounded } from "@/components/Bounded";
-import clsx from "clsx";
 import { Heading } from "@/components/Heading";
 import { ButtonLink } from "@/components/ButtonLink";
-import ParallaxImage from "./ParallaxImage";
 import { SlideIn } from "@/components/SlideIn";
+import ParallaxImage from "@/slices/TextAndImage/ParallaxImage";
 
 declare module "react" {
   interface CSSProperties {

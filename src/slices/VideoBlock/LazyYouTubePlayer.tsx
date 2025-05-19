@@ -1,7 +1,7 @@
 "use client";
 
-import { KeyTextField } from "@prismicio/client";
 import { useEffect, useRef, useState } from "react";
+import { KeyTextField } from "@prismicio/client";
 
 type VideoProps = {
   youTubeID: KeyTextField;

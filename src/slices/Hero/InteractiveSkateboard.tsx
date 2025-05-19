@@ -1,7 +1,8 @@
 "use client";
+
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
-import React, { Suspense, useEffect, useRef, useState } from "react";
 import {
   ContactShadows,
   Environment,
@@ -11,8 +12,8 @@ import {
 import { Canvas, ThreeEvent, useThree } from "@react-three/fiber";
 
 import { Skateboard } from "@/slices/Hero/Skateboard";
-import HotSpot from "./HotSpot";
-import { WavyPaths } from "./WavyPaths";
+import HotSpot from "@/slices/Hero/HotSpot";
+import { WavyPaths } from "@/slices/Hero/WavyPaths";
 
 const INITIAL_CAMERA_POSITION = [1.5, 1, 1.4] as const;
 

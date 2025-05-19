@@ -1,9 +1,10 @@
-import { ButtonLink } from "@/components/ButtonLink";
+import React from "react";
+import clsx from "clsx";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import React from "react";
-import { SkaterScribble } from "./SkaterScribble";
-import clsx from "clsx";
+
+import { ButtonLink } from "@/components/ButtonLink";
+import { SkaterScribble } from "@/slices/TeamGrid/SkaterScribble";
 
 type Props = {
   skater: Content.SkaterDocument;

@@ -1,6 +1,7 @@
 "use client";
 import React, { ComponentProps, ReactNode, useEffect } from "react";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 import {
   ColorField,
   Content,
@@ -8,11 +9,11 @@ import {
   isFilled,
   KeyTextField,
 } from "@prismicio/client";
-import { Heading } from "@/components/Heading";
 import { PrismicImageProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { useCustomizerControls } from "./context";
-import { useRouter } from "next/navigation";
+
+import { Heading } from "@/components/Heading";
+import { useCustomizerControls } from "@/app/build/context";
 
 type Props = Pick<
   Content.BoardCustomizerDocumentData,
@@ -161,7 +162,7 @@ const Option = ({
   imgixParams,
   colorField,
   onClick,
-  ...restProps
+  // ...restProps
 }: OptionProps) => {
   return (
     <li>

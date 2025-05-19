@@ -1,11 +1,11 @@
 import React from "react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { asImageSrc } from "@prismicio/client";
 
 import { Logo } from "@/components/Logo";
 import { createClient } from "@/prismicio";
-import { Bounded } from "./Bounded";
-import { FooterPhysics } from "./FooterPhysics";
-import { asImageSrc } from "@prismicio/client";
+import { Bounded } from "@/components/Bounded";
+import { FooterPhysics } from "@/components/FooterPhysics";
 
 export default async function Footer() {
   const client = createClient();

@@ -1,6 +1,6 @@
-import { Billboard } from "@react-three/drei";
 import React, { useRef } from "react";
 import * as THREE from "three";
+import { Billboard } from "@react-three/drei";
 
 interface HotSpotProps {
   position: [number, number, number];

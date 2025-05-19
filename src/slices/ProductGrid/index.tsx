@@ -8,8 +8,8 @@ import {
 
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
-import SkateboardProduct from "./SkateboardProduct";
 import { SlideIn } from "@/components/SlideIn";
+import SkateboardProduct from "@/slices/ProductGrid/SkateboardProduct";
 
 /**
  * Props for `ProductGrid`.

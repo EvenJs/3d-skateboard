@@ -1,10 +1,11 @@
 import { FC } from "react";
-import { Content, isFilled } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
-import { Bounded } from "@/components/Bounded";
-import { LazyYouTubePlayer } from "./LazyYouTubePlayer";
 import clsx from "clsx";
 import Image from "next/image";
+import { Content, isFilled } from "@prismicio/client";
+import { SliceComponentProps } from "@prismicio/react";
+
+import { Bounded } from "@/components/Bounded";
+import { LazyYouTubePlayer } from "@/slices/VideoBlock/LazyYouTubePlayer";
 
 const MASK_CLASSES =
   "[mask-image:url(/video-mask.png)] [mask-mode:alpha] [mask-position:center_center] [mask-repeat:no-repeat] [mask-size:100%_auto]";

@@ -6,9 +6,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { Logo } from "@/components/Logo";
 import { createClient } from "@/prismicio";
 
-type Props = {};
-
-export default async function Header({}: Props) {
+export default async function Header() {
   const client = createClient();
   const settings = await client.getSingle("settings");
 

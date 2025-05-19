@@ -6,9 +6,8 @@ import { createClient } from "@/prismicio";
 import { Bounded } from "./Bounded";
 import { FooterPhysics } from "./FooterPhysics";
 import { asImageSrc } from "@prismicio/client";
-type Props = {};
 
-export default async function Footer({}: Props) {
+export default async function Footer() {
   const client = createClient();
   const settings = await client.getSingle("settings");
 
@@ -43,7 +42,6 @@ export default async function Footer({}: Props) {
           ))}
         </ul>
       </Bounded>
-      {/* List of links */}
     </footer>
   );
 }

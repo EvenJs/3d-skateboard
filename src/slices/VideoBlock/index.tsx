@@ -24,32 +24,6 @@ const VideoBlock: FC<VideoBlockProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-texture bg-zinc-900"
     >
-      {/**
-       * 💡 Use Prismic MCP with your code editor
-       *
-       * Get AI-powered help to build your slice components — based on your actual model.
-       *
-       * ▶️ Setup:
-       * 1. Add a new MCP Server in your code editor:
-       *
-       * {
-       *   "mcpServers": {
-       *     "Prismic MCP": {
-       *       "command": "npx",
-       *       "args": ["-y", "@prismicio/mcp-server"]
-       *     }
-       *   }
-       * }
-       *
-       * 2. Select Claude 3.7 Sonnet (recommended for optimal output)
-       *
-       * ✅ Then open your slice file and ask your code editor:
-       *    "Code this slice"
-       *
-       * Your code editor reads your slice model and helps you code faster ⚡
-       * 📚 Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
-       */}
-
       <h2 className="sr-only">Video Reel</h2>
       <div className="relative aspect-video">
         {/* Masks */}

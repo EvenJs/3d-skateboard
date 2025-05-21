@@ -8,12 +8,13 @@ import { asImageSrc } from "@prismicio/client";
 
 import { Skateboard } from "@/slices/Hero/Skateboard";
 import { useCustomizerControls } from "@/app/build/context";
-
-const DEFAULT_DECK_TEXTURE = "/skateboard/Deck.webp";
-const DEFAULT_WHEEL_TEXTURE = "/skateboard/SkateWheel1.png";
-const DEFAULT_TRUCK_COLOR = "#6F6E6A";
-const DEFAULT_BOLT_COLOR = "#6F6E6A";
-const ENVIRONMENT_COLOR = "#3B3A3A";
+import {
+  DEFAULT_TRUCK_COLOR,
+  DEFAULT_WHEEL_TEXTURE,
+  DEFAULT_DECK_TEXTURE,
+  DEFAULT_BOLT_COLOR,
+  ENVIRONMENT_COLOR,
+} from "@/constants";
 
 type Props = {
   wheelTextureURls: string[];
